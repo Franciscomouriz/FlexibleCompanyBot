@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>FlexibleCompanyBot</title>
+
+        <script type="module" src="web-components/flexible-company-bot/FlexibleCompanyBot.js"></script>
+        <script type="module" src="web-components/upload-file/FileUploader.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            .flex-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .chatbot-container, .file-container {
+                width: 30%;
+                height: 50vh;
+                overflow-y: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="chatbot-container">
+                <flexiblecompanybot-component></flexiblecompanybot-component>
+            </div>
+            <div class="file-container">
+                <file-uploader server_url="http://localhost"></file-uploader>
+            </div>
+        </div>        
+    </body>
+</html>

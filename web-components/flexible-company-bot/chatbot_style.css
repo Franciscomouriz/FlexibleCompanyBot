@@ -1,0 +1,130 @@
+.web-component {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.web-component svg{
+    height: 3vh;
+}
+
+#saludo {
+    font-size: 2em;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 10%;
+}
+
+#conversacion {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    height: 70vh;
+    padding: 0.25em;
+}
+
+#entrada {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25em;
+    background-color: #dad9d9;
+    border: 1px solid #ccc;
+}
+
+#mensaje {
+    flex-grow: 3;
+    margin-right: 1em;
+    background-color: transparent;
+    height: 3vh;
+}
+
+#enviar{
+    flex-grow: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+#enviar:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+}
+
+#reset {
+    flex-grow: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+#reset:hover{
+    cursor: pointer;
+    background-color: #c7c7c7;
+}
+
+.enviarDesactivado {
+    background-color: #6b85a1;
+}
+
+.mensaje-usuario {
+    display: inline-block;
+    padding: 5px;
+    background-color: #929191;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.mensaje-bot {
+    display: inline-block;
+    padding: 5px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.mensaje-error {
+    display: inline-block;
+    padding: 5px;
+    background-color: #a76666;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.mensaje-container {
+    display: block;
+}
+
+
+/* CSS responsivo */
+@media screen and (max-width: 1000px) {
+    #saludo {
+        font-size: 1.5em;
+    }
+
+    #mensaje {
+        flex-grow: 1;
+        margin-bottom: 0.5em;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #enviar, #reset {
+        width: 17%;
+    }
+}
+
+/* Animación de carga*/
+.loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #D9D9D9; /* Blue */
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

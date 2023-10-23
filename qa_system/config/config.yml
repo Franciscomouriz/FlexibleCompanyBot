@@ -1,0 +1,23 @@
+data_path:
+  new_files_path: "./dataset/files/new_files/"
+  temp_files: "./dataset/files/temp_files/"
+  segments_path: "./dataset/segments/"
+  segments_file: "./dataset/segments/segments.json"
+  index_path: "./dataset/index"
+
+window:
+  stride: 2 
+  max_length: 3
+
+segment_search:
+  num_segments: 100
+
+segment_rerank:
+  max_docs: 5
+
+generate_answer:
+  prompt: "Se te presentan varios fragmentos de texto relacionados con un tema específico. Utilizando los fragmentos rankeados por relevancia, tu tarea es responder una pregunta sobre el tema en cuestión. Lee cuidadosamente los fragmentos y selecciona la información más relevante para responder la pregunta. Recuerda que la respuesta debe ser precisa y concisa. Los fragmentos son:"
+  max_len_answer: 1000
+
+correct_answer:
+  language: "es"

@@ -1,0 +1,12 @@
+
+qa_model/dataset/files
+qa_model/dataset/index
+qa_model/dataset/qa
+qa_model/dataset/segments
+grobid-0.7.2
+.idea
+__pycache__/
+*.pyc
+poetry.lock
+*.log
+
